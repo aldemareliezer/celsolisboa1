@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de Preferência de Heavy Metal</title>
+  <!-- Link para o arquivo CSS -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1>Qual o seu tipo favorito de Heavy Metal?</h1>
+  <div class="form-container">
+    <form id="metalForm">
+      <label for="metalChoice">Escolha uma opção:</label><br><br>
+      <input type="radio" id="metalcore" name="metalType" value="Metalcore">
+      <label for="metalcore">Metalcore</label><br>
+      <input type="radio" id="deathcore" name="metalType" value="Deathcore">
+      <label for="deathcore">Deathcore</label><br>
+      <input type="radio" id="industrial" name="metalType" value="Metal Industrial">
+      <label for="industrial">Metal Industrial</label><br>
+      <input type="radio" id="newMetal" name="metalType" value="New Metal">
+      <label for="newMetal">New Metal</label><br><br>
+      
+      <button type="button" onclick="submitForm()">Enviar</button>
+    </form>
+  </div>
+
+  <script>
+    function submitForm() {
+      const selectedMetal = document.querySelector('input[name="metalType"]:checked');
+      if (selectedMetal) {
+        alert("Você escolheu: " + selectedMetal.value);
+      } else {
+        alert("Por favor, selecione uma opção.");
+      }
+    }
+  </script>
+</body>
+</html>
